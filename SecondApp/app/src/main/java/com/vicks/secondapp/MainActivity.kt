@@ -186,6 +186,8 @@ class MainActivity : ComponentActivity() {
                 onClick = {
                     if (email.length < 10) error = "Invalid email"
                     else if (password.length < 6) error = "Password must be at least 6 characters"
+                    else if(!email.contains('@',true))  error = "Invalid email format"
+                    //else if(!password.contains())
                 },
                 Modifier.size(388.dp, 48.dp),
                 shape = RoundedCornerShape(8.dp),
@@ -225,4 +227,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
